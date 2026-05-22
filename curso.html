@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Leilão Seguro do Zero | Victor Prata</title>
+
+<meta name="description" content="Aprenda a analisar imóveis de leilão com mais clareza, segurança jurídica e método. Curso online para iniciantes." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#f5f7f8;
+--white:#ffffff;
+--text:#111827;
+--muted:#5f6b76;
+--primary:#173841;
+--primary-hover:#214c57;
+--border:#e4e8eb;
+--highlight:#eef5f4;
+--shadow:0 12px 32px rgba(0,0,0,.06);
+--radius:22px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
+-webkit-font-smoothing:antialiased;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+section{
+padding:90px 0;
+}
+
+.hero{
+padding:110px 0 90px;
+background:
+linear-gradient(to bottom,#ffffff 0%,#f5f7f8 100%);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 16px;
+background:var(--highlight);
+border:1px solid #dce7e5;
+border-radius:999px;
+font-size:.88rem;
+font-weight:600;
+color:var(--primary);
+margin-bottom:28px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:60px;
+align-items:center;
+}
+
+.hero h1{
+font-size:clamp(2.5rem,5vw,4.5rem);
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:24px;
+font-weight:800;
+max-width:700px;
+}
+
+.hero p{
+font-size:1.15rem;
+color:var(--muted);
+max-width:640px;
+margin-bottom:36px;
+}
+
+.buttons{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+transition:.25s;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+box-shadow:var(--shadow);
+}
+
+.btn-primary:hover{
+background:var(--primary-hover);
+transform:translateY(-2px);
+}
+
+.btn-secondary{
+background:white;
+border:1px solid var(--border);
+color:var(--text);
+}
+
+.btn-secondary:hover{
+background:#fafafa;
+}
+
+.video-box{
+background:white;
+border-radius:28px;
+padding:18px;
+box-shadow:var(--shadow);
+border:1px solid var(--border);
+}
+
+.video-placeholder{
+aspect-ratio:16/9;
+background:#dfe7ea;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+color:#50616b;
+font-size:1rem;
+text-align:center;
+padding:20px;
+}
+
+.section-title{
+font-size:clamp(2rem,4vw,3rem);
+line-height:1.1;
+letter-spacing:-1px;
+margin-bottom:20px;
+}
+
+.section-sub{
+color:var(--muted);
+max-width:760px;
+margin-bottom:50px;
+font-size:1.05rem;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:var(--radius);
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card h3{
+font-size:1.15rem;
+margin-bottom:14px;
+}
+
+.card p{
+color:var(--muted);
+font-size:.97rem;
+}
+
+.quote-section{
+background:white;
+}
+
+.quote{
+font-size:clamp(1.6rem,3vw,2.6rem);
+line-height:1.3;
+max-width:920px;
+font-weight:700;
+letter-spacing:-1px;
+}
+
+.quote span{
+color:var(--primary);
+}
+
+.authority{
+display:grid;
+grid-template-columns:280px 1fr;
+gap:40px;
+align-items:center;
+}
+
+.authority-image{
+width:100%;
+aspect-ratio:1/1;
+background:#dfe7ea;
+border-radius:28px;
+}
+
+.authority p{
+color:var(--muted);
+margin-bottom:18px;
+}
+
+.offer{
+background:linear-gradient(135deg,#173841,#214c57);
+color:white;
+border-radius:36px;
+padding:60px;
+box-shadow:0 24px 48px rgba(0,0,0,.12);
+}
+
+.offer h2{
+font-size:clamp(2rem,4vw,3rem);
+line-height:1.1;
+margin-bottom:18px;
+}
+
+.offer p{
+max-width:760px;
+opacity:.92;
+margin-bottom:34px;
+}
+
+.offer-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.offer-item{
+background:rgba(255,255,255,.08);
+padding:20px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.offer-item strong{
+display:block;
+margin-bottom:10px;
+}
+
+.faq{
+display:grid;
+gap:18px;
+}
+
+.faq-item{
+background:white;
+padding:26px;
+border-radius:18px;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+}
+
+.faq-item h3{
+margin-bottom:10px;
+font-size:1.05rem;
+}
+
+.faq-item p{
+color:var(--muted);
+}
+
+.final{
+text-align:center;
+}
+
+.final h2{
+font-size:clamp(2rem,4vw,3.2rem);
+line-height:1.1;
+letter-spacing:-1px;
+margin-bottom:20px;
+}
+
+.final p{
+color:var(--muted);
+max-width:720px;
+margin:auto;
+margin-bottom:36px;
+}
+
+footer{
+padding:50px 0 70px;
+text-align:center;
+font-size:.9rem;
+color:var(--muted);
+}
+
+.sticky{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:999;
+}
+
+.sticky a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 24px;
+background:var(--primary);
+color:white;
+border-radius:999px;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 14px 34px rgba(0,0,0,.18);
+transition:.25s;
+}
+
+.sticky a:hover{
+background:var(--primary-hover);
+}
+
+@media(max-width:900px){
+
+.hero-grid,
+.authority{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:90px 0 70px;
+}
+
+.offer{
+padding:34px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.sticky{
+width:92%;
+}
+
+.sticky a{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+
+<div class="badge">
+✔ Curso online para iniciantes em leilão de imóveis
+</div>
+
+<h1>
+Aprenda a analisar imóveis de leilão com mais clareza, segurança e método.
+</h1>
+
+<p>
+Um treinamento feito para quem quer entender o mercado de leilões antes de tomar decisões arriscadas.
+Sem promessas irreais.
+Sem juridiquês desnecessário.
+Apenas clareza técnica aplicada na prática.
+</p>
+
+<div class="buttons">
+
+<a href="#oferta" class="btn btn-primary">
+Quero conhecer o treinamento
+</a>
+
+<a href="#conteudo" class="btn btn-secondary">
+Ver o que vou aprender
+</a>
+
+</div>
+
+</div>
+
+<div class="video-box">
+
+<div class="video-placeholder">
+INSIRA AQUI SUA VSL<br><br>
+(YouTube, Vimeo ou vídeo hospedado)
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="quote-section">
+
+<div class="container">
+
+<div class="quote">
+“O problema não é encontrar imóveis baratos. O problema é <span>não saber analisar o que está comprando.</span>”
+</div>
+
+</div>
+
+</section>
+
+<section id="conteudo">
+
+<div class="container">
+
+<h2 class="section-title">
+O que você aprende no treinamento
+</h2>
+
+<p class="section-sub">
+O curso foi estruturado para transformar complexidade em clareza, ajudando iniciantes a desenvolver uma visão mais segura sobre oportunidades em leilão.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Leitura de edital</h3>
+<p>Aprenda a interpretar os pontos mais importantes antes de qualquer decisão.</p>
+</div>
+
+<div class="card">
+<h3>Análise jurídica</h3>
+<p>Entenda os principais riscos jurídicos que precisam ser observados.</p>
+</div>
+
+<div class="card">
+<h3>Identificação de riscos</h3>
+<p>Saiba identificar sinais que podem transformar uma oportunidade em problema.</p>
+</div>
+
+<div class="card">
+<h3>Estratégia de lance</h3>
+<p>Aprenda a agir com racionalidade e evitar decisões emocionais.</p>
+</div>
+
+<div class="card">
+<h3>Imóveis ocupados</h3>
+<p>Entenda os impactos práticos e jurídicos da ocupação.</p>
+</div>
+
+<div class="card">
+<h3>Documentação</h3>
+<p>Descubra o que analisar antes de considerar qualquer arrematação.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Este treinamento é para você se:
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Está começando agora</h3>
+<p>E sente que o mercado parece complexo ou confuso.</p>
+</div>
+
+<div class="card">
+<h3>Quer mais segurança</h3>
+<p>Antes de analisar oportunidades ou pensar em dar lances.</p>
+</div>
+
+<div class="card">
+<h3>Quer entender os riscos</h3>
+<p>Sem depender apenas de opiniões superficiais da internet.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="authority">
+
+<div class="authority-image"></div>
+
+<div>
+
+<h2 class="section-title">
+Quem desenvolveu o treinamento
+</h2>
+
+<p>
+Victor Prata é advogado com atuação focada em leilões judiciais e análise técnica de imóveis.
+</p>
+
+<p>
+O objetivo do treinamento não é criar falsas expectativas sobre o mercado, mas ajudar iniciantes a desenvolver clareza, método e visão estratégica antes de tomar decisões.
+</p>
+
+<p>
+Primeiro segurança.
+Depois oportunidade.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="oferta">
+
+<div class="container">
+
+<div class="offer">
+
+<h2>
+Leilão Seguro do Zero
+</h2>
+
+<p>
+Um treinamento pensado para ajudar iniciantes a compreender melhor o funcionamento dos leilões de imóveis e desenvolver uma análise mais consciente e segura.
+</p>
+
+<div class="offer-list">
+
+<div class="offer-item">
+<strong>Módulo 1</strong>
+Fundamentos do mercado de leilões
+</div>
+
+<div class="offer-item">
+<strong>Módulo 2</strong>
+Como analisar editais corretamente
+</div>
+
+<div class="offer-item">
+<strong>Módulo 3</strong>
+Riscos jurídicos e documentação
+</div>
+
+<div class="offer-item">
+<strong>Módulo 4</strong>
+Estratégia de análise prática
+</div>
+
+</div>
+
+<a href="https://pay.kiwify.com.br/SEULINK" class="btn btn-primary">
+Entrar no treinamento
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Perguntas frequentes
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>O curso é para iniciantes?</h3>
+<p>Sim. O treinamento foi pensado justamente para quem está começando do zero.</p>
+</div>
+
+<div class="faq-item">
+<h3>Preciso entender direito?</h3>
+<p>Não. O conteúdo foi estruturado em linguagem clara e acessível.</p>
+</div>
+
+<div class="faq-item">
+<h3>O curso promete ganhos financeiros?</h3>
+<p>Não. O foco do treinamento é análise, clareza e segurança na tomada de decisão.</p>
+</div>
+
+<div class="faq-item">
+<h3>Vou aprender a analisar oportunidades com mais segurança?</h3>
+<p>Esse é exatamente o objetivo do treinamento.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<div class="container">
+
+<h2>
+Primeiro clareza.<br>
+Depois oportunidade.
+</h2>
+
+<p>
+Aprenda a analisar imóveis de leilão com mais método, segurança e visão estratégica.
+</p>
+
+<a href="https://pay.kiwify.com.br/SEULINK" class="btn btn-primary">
+Entrar no Leilão Seguro do Zero
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<div class="container">
+© 2026 Victor Prata — Todos os direitos reservados.
+</div>
+</footer>
+
+<div class="sticky">
+<a href="https://pay.kiwify.com.br/SEULINK">
+Quero acessar o treinamento
+</a>
+</div>
+
+</body>
+</html>

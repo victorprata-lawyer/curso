@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Checklist do Leilão Seguro | Victor Prata</title>
+
+<meta name="description" content="Checklist prático com 15 pontos essenciais para analisar imóveis de leilão com mais clareza, segurança jurídica e menos risco." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#f5f7f8;
+--white:#ffffff;
+--text:#111827;
+--muted:#5f6b76;
+--primary:#163a43;
+--primary-light:#24515d;
+--border:#e4e8eb;
+--highlight:#eef5f4;
+--shadow:0 10px 30px rgba(0,0,0,.05);
+--radius:18px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+-webkit-font-smoothing:antialiased;
+}
+
+.container{
+width:min(1100px,92%);
+margin:auto;
+}
+
+.hero{
+padding:90px 0 70px;
+background:
+linear-gradient(to bottom, #ffffff 0%, #f5f7f8 100%);
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 16px;
+background:var(--highlight);
+border:1px solid #d8e6e3;
+border-radius:999px;
+font-size:.88rem;
+font-weight:600;
+color:var(--primary);
+margin-bottom:24px;
+}
+
+.hero h1{
+font-size:clamp(2.2rem,5vw,4rem);
+line-height:1.05;
+max-width:850px;
+letter-spacing:-2px;
+margin-bottom:24px;
+font-weight:800;
+}
+
+.hero p{
+font-size:1.15rem;
+max-width:760px;
+color:var(--muted);
+margin-bottom:38px;
+}
+
+.hero-actions{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 28px;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+transition:.25s;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+box-shadow:var(--shadow);
+}
+
+.btn-primary:hover{
+background:var(--primary-light);
+transform:translateY(-2px);
+}
+
+.btn-secondary{
+background:white;
+border:1px solid var(--border);
+color:var(--text);
+}
+
+.btn-secondary:hover{
+background:#fafafa;
+}
+
+.intro{
+padding:20px 0 70px;
+}
+
+.intro-box{
+background:white;
+padding:34px;
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+border:1px solid var(--border);
+}
+
+.intro-box p{
+font-size:1.05rem;
+color:var(--muted);
+margin-bottom:16px;
+}
+
+.quote{
+margin-top:28px;
+padding:22px;
+background:var(--highlight);
+border-left:4px solid var(--primary);
+border-radius:14px;
+font-weight:600;
+color:var(--primary);
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:14px;
+letter-spacing:-1px;
+}
+
+.section-sub{
+color:var(--muted);
+margin-bottom:42px;
+max-width:700px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+gap:24px;
+margin-bottom:80px;
+}
+
+.card{
+background:white;
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:30px;
+box-shadow:var(--shadow);
+transition:.25s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card-number{
+font-size:.85rem;
+font-weight:700;
+color:var(--primary);
+margin-bottom:14px;
+}
+
+.card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.card p{
+color:var(--muted);
+font-size:.98rem;
+margin-bottom:18px;
+}
+
+.highlight{
+display:block;
+padding:14px;
+background:var(--highlight);
+border-radius:12px;
+font-size:.92rem;
+font-weight:600;
+color:var(--primary);
+}
+
+.cta-section{
+padding:90px 0;
+}
+
+.cta-box{
+background:linear-gradient(135deg,#163a43,#204c57);
+color:white;
+padding:60px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.cta-box h2{
+font-size:clamp(2rem,4vw,3rem);
+line-height:1.1;
+margin-bottom:20px;
+letter-spacing:-1px;
+}
+
+.cta-box p{
+max-width:700px;
+margin:auto;
+opacity:.9;
+margin-bottom:34px;
+font-size:1.05rem;
+}
+
+footer{
+padding:50px 0 70px;
+text-align:center;
+color:var(--muted);
+font-size:.92rem;
+}
+
+.sticky-cta{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:999;
+}
+
+.sticky-cta a{
+background:var(--primary);
+color:white;
+padding:15px 22px;
+border-radius:999px;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 12px 30px rgba(0,0,0,.18);
+transition:.25s;
+}
+
+.sticky-cta a:hover{
+background:var(--primary-light);
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:70px 0 50px;
+}
+
+.hero-actions{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.intro-box,
+.card,
+.cta-box{
+padding:24px;
+}
+
+.cta-box h2{
+font-size:2rem;
+}
+
+.sticky-cta{
+width:92%;
+}
+
+.sticky-cta a{
+display:block;
+text-align:center;
+width:100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div class="container">
+
+<div class="badge">
+✔ Checklist prático para iniciantes
+</div>
+
+<h1>
+Checklist do Leilão Seguro
+</h1>
+
+<p>
+15 pontos essenciais para analisar imóveis de leilão com mais clareza antes de pensar em dar um lance.
+</p>
+
+<div class="hero-actions">
+<a href="#checklist" class="btn btn-primary">
+Começar análise
+</a>
+
+<a href="https://victorprataleilao.com/curso" class="btn btn-secondary">
+Conhecer o curso completo
+</a>
+</div>
+
+</div>
+</section>
+
+<section class="intro">
+<div class="container">
+
+<div class="intro-box">
+
+<h2 class="section-title">
+Antes do desconto, vem a clareza.
+</h2>
+
+<p>
+Grande parte dos erros em leilões acontece porque as pessoas analisam apenas o preço e ignoram fatores jurídicos, documentais e estratégicos.
+</p>
+
+<p>
+Este checklist foi criado para ajudar iniciantes a enxergar os principais pontos antes de qualquer decisão.
+</p>
+
+<div class="quote">
+“Preço baixo sozinho não transforma um imóvel em oportunidade.”
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="checklist">
+<div class="container">
+
+<h2 class="section-title">
+Os 15 pontos da análise inicial
+</h2>
+
+<p class="section-sub">
+Use este material como um roteiro de clareza antes de avaliar qualquer oportunidade em leilão.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-number">01</div>
+<h3>Identificação do imóvel</h3>
+<p>Confirme matrícula, endereço, metragem e características reais do imóvel.</p>
+<span class="highlight">Nunca analise um imóvel sem validar a matrícula.</span>
+</div>
+
+<div class="card">
+<div class="card-number">02</div>
+<h3>Leitura do edital</h3>
+<p>O edital define regras, obrigações e condições da venda.</p>
+<span class="highlight">O edital sempre prevalece.</span>
+</div>
+
+<div class="card">
+<div class="card-number">03</div>
+<h3>Tipo do leilão</h3>
+<p>Entenda se é judicial ou extrajudicial e os impactos disso.</p>
+<span class="highlight">Cada modalidade possui riscos diferentes.</span>
+</div>
+
+<div class="card">
+<div class="card-number">04</div>
+<h3>Ocupação do imóvel</h3>
+<p>Descubra se o imóvel está ocupado e quem está no local.</p>
+<span class="highlight">Imóvel ocupado exige análise mais cuidadosa.</span>
+</div>
+
+<div class="card">
+<div class="card-number">05</div>
+<h3>Dívidas existentes</h3>
+<p>Verifique IPTU, condomínio e outras pendências relevantes.</p>
+<span class="highlight">Nem toda dívida desaparece no leilão.</span>
+</div>
+
+<div class="card">
+<div class="card-number">06</div>
+<h3>Avaliação real de mercado</h3>
+<p>Compare o valor do imóvel com imóveis semelhantes na região.</p>
+<span class="highlight">Desconto artificial é mais comum do que parece.</span>
+</div>
+
+<div class="card">
+<div class="card-number">07</div>
+<h3>Visitação</h3>
+<p>Veja se existe possibilidade de visita presencial.</p>
+<span class="highlight">Fotos nem sempre mostram a realidade.</span>
+</div>
+
+<div class="card">
+<div class="card-number">08</div>
+<h3>Custos adicionais</h3>
+<p>Inclua taxas, comissão e regularizações no cálculo.</p>
+<span class="highlight">O valor do lance não é o custo final.</span>
+</div>
+
+<div class="card">
+<div class="card-number">09</div>
+<h3>Situação processual</h3>
+<p>Analise se há recursos ou disputas envolvendo o imóvel.</p>
+<span class="highlight">Segurança jurídica importa mais que velocidade.</span>
+</div>
+
+<div class="card">
+<div class="card-number">10</div>
+<h3>Documentação</h3>
+<p>Verifique inconsistências e informações incompletas.</p>
+<span class="highlight">Documento ignorado hoje pode virar problema amanhã.</span>
+</div>
+
+<div class="card">
+<div class="card-number">11</div>
+<h3>Liquidez</h3>
+<p>Pense na facilidade futura de venda ou locação.</p>
+<span class="highlight">Boa compra também considera saída.</span>
+</div>
+
+<div class="card">
+<div class="card-number">12</div>
+<h3>Estratégia de lance</h3>
+<p>Defina limite racional antes do leilão começar.</p>
+<span class="highlight">Emoção costuma aumentar prejuízo.</span>
+</div>
+
+<div class="card">
+<div class="card-number">13</div>
+<h3>Prazo de regularização</h3>
+<p>Alguns imóveis exigem etapas longas após arrematação.</p>
+<span class="highlight">Tempo também é custo.</span>
+</div>
+
+<div class="card">
+<div class="card-number">14</div>
+<h3>Análise da região</h3>
+<p>Observe infraestrutura, segurança e potencial da área.</p>
+<span class="highlight">O entorno influencia diretamente o valor.</span>
+</div>
+
+<div class="card">
+<div class="card-number">15</div>
+<h3>Clareza antes da decisão</h3>
+<p>Se houver dúvidas relevantes, continue analisando antes de agir.</p>
+<span class="highlight">Sem clareza, não existe decisão segura.</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+Quer aprender a analisar imóveis de leilão com mais segurança?
+</h2>
+
+<p>
+O checklist mostra os pontos iniciais. No treinamento completo, você aprende a interpretar riscos, analisar editais, evitar armadilhas e desenvolver uma visão técnica mais segura sobre oportunidades em leilão.
+</p>
+
+<a href="https://victorprataleilao.com/curso" class="btn btn-primary">
+Conhecer o treinamento completo
+</a>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<div class="container">
+© 2026 Victor Prata — Todos os direitos reservados.
+</div>
+</footer>
+
+<div class="sticky-cta">
+<a href="https://victorprataleilao.com/curso">
+Ver treinamento completo
+</a>
+</div>
+
+</body>
+</html
