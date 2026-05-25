@@ -88,9 +88,16 @@ flex-wrap:wrap;
 }
 
 .btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
 width:100%;
 padding:16px 20px;
 text-align:center;
+border-radius:14px;
+font-weight:700;
+text-decoration:none;
+transition:.25s;
 }
 
 .btn-primary{
@@ -268,14 +275,15 @@ background:var(--primary-light);
     padding:70px 0 50px;
   }
 
-  .hero h1,
-  .hero p,
-  .section-title,
-  .section-sub,
-  .intro-box p,
-  .card p{
+    .hero h1,
+    .hero p,
+    .section-title,
+    .section-sub,
+    .intro-box p,
+    .card h3,
+    .card p{
     text-align:center;
-  }
+    }
 
   .hero p,
   .section-sub,
